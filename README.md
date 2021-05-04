@@ -6,4 +6,4 @@ This folder contains a reference implementation of the computational framework p
 
 by S. Kotiang, and A. Eslami
 
-For further help see the uploaded ReadMe.txt file
+For further details see the uploaded ReadMe.txt file
