@@ -4,4 +4,6 @@ This folder contains a reference implementation of the computational framework p
 
 "Boolean Factor Graph Model for Biological Systems: The Yeast Cell-Cycle Network" submitted to the BMC Bioinformatics
 
-S. Kotiang, and A. Eslami
+by S. Kotiang, and A. Eslami
+
+For further help see the uploaded ReadMe.txt file
