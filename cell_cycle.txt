@@ -1,0 +1,21 @@
+#
+# load this network and its logical rules in R environment using
+#    network <- loadNetwork("cell_cycle.txt", symbolic = TRUE)
+#    the logical rules implement majority voting using maj() command avaliable in 
+#    BoolNet package
+#
+targets, factors
+
+Cln3, ! Cln3 & Cln3
+MBF, maj(Cln3, ! Clb2)
+SBF, maj(Cln3, ! Clb2)
+Cln2, (SBF & Cln2[-1]) | SBF
+Cdh1, maj(! Cln2, Cdc20, ! Clb5, ! Clb2)
+Swi5, (maj(Cdc20, Mcm1, ! Clb2) & Swi5[-1]) | maj(Cdc20, Mcm1, ! Clb2)
+Cdc20, (maj(Clb2, Mcm1) & Cdc20[-1]) | maj(Clb2, Mcm1) 
+Clb5, maj(MBF, ! Cdc20, ! Sic1)
+Sic1, maj(! Cln2, Swi5, Cdc20, ! Clb5, ! Clb2)
+Clb2, maj(! Cdh1, ! Cdc20, Clb5, ! Sic1, Mcm1)
+Mcm1, (maj(Clb5, Clb2) & Mcm1[-1]) | maj(Clb5, Clb2)
+
+
